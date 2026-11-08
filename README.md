@@ -210,10 +210,6 @@ npm install
 ```bash
 npm run dev
 ```
-The application will launch locally at:
-```
-http://localhost:5173/
-```
 
 ### 4. Build for Production
 To verify TypeScript compilation and produce an optimized distribution bundle:
