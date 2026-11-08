@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-11-08T23:06:41.571508",
+  "backend": "local",
+  "agent_mode": "heuristic",
+  "stream_count": 200,
+  "holdout_count": 100,
+  "policy_change_test": {
+    "vendor_tested": "VEND-TATA",
+    "triggered_at_invoice": 100,
+    "conflicts_detected": 14
+  },
+  "weekly_acceptance": [
+    {
+      "week": "Week 1",
+      "withMemory": 31,
+      "withoutMemory": 28
+    },
+    {
+      "week": "Week 2",
+      "withMemory": 56,
+      "withoutMemory": 28
+    },
+    {
+      "week": "Week 3",
+      "withMemory": 88,
+      "withoutMemory": 28
+    },
+    {
+      "week": "Week 4",
+      "withMemory": 92,
+      "withoutMemory": 28
+    },
+    {
+      "week": "Week 5",
+      "withMemory": 95,
+      "withoutMemory": 28
+    },
+    {
+      "week": "Week 6",
+      "withMemory": 92,
+      "withoutMemory": 28
+    },
+    {
+      "week": "Week 7",
+      "withMemory": 92,
+      "withoutMemory": 28
+    },
+    {
+      "week": "Week 8",
+      "withMemory": 95,
+      "withoutMemory": 28
+    }
+  ],
+  "conditions": {
+    "no_memory": {
+      "accuracy": 13.5,
+      "accepted_as_is_rate": 13.5,
+      "false_approval_rate": 0.0,
+      "total_tested": 200
+    },
+    "recall_only": {
+      "accuracy": 78.5,
+      "accepted_as_is_rate": 78.5,
+      "false_approval_rate": 0.0,
+      "total_tested": 200
+    },
+    "recall_reflect": {
+      "accuracy": 78.5,
+      "accepted_as_is_rate": 78.5,
+      "false_approval_rate": 0.0,
+      "total_tested": 200
+    }
+  },
+  "holdout_performance": {
+    "accuracy": 93.0,
+    "false_approval_rate": 0.0,
+    "total_tested": 100
+  }
+}

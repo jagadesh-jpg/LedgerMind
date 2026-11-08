@@ -5,10 +5,16 @@ import { AppLayout } from './components/layout/AppLayout';
 const OverviewPage = lazy(() =>
   import('./pages/OverviewPage').then((m) => ({ default: m.OverviewPage }))
 );
+const InvoiceQueuePage = lazy(() =>
+  import('./pages/InvoiceQueuePage').then((m) => ({ default: m.InvoiceQueuePage }))
+);
 const InvoiceDetailsPlaceholder = lazy(() =>
   import('./pages/InvoiceDetailsPlaceholder').then((m) => ({
     default: m.InvoiceDetailsPlaceholder,
   }))
+);
+const VendorsPage = lazy(() =>
+  import('./pages/VendorsPage').then((m) => ({ default: m.VendorsPage }))
 );
 const PlaceholderPage = lazy(() =>
   import('./pages/PlaceholderPage').then((m) => ({ default: m.PlaceholderPage }))
@@ -34,30 +40,14 @@ export const App: React.FC = () => {
             {/* Main Overview Dashboard */}
             <Route path="/" element={<OverviewPage searchQuery={globalSearch} />} />
 
-            {/* Invoices List / Queue Placeholder */}
-            <Route
-              path="/invoices"
-              element={
-                <PlaceholderPage
-                  title="Invoice Queue"
-                  description="Comprehensive list of incoming, pending, and flagged vendor invoices."
-                />
-              }
-            />
+            {/* Invoices List / Queue */}
+            <Route path="/invoices" element={<InvoiceQueuePage />} />
 
             {/* Invoice Details Route */}
             <Route path="/invoices/:id" element={<InvoiceDetailsPlaceholder />} />
 
-            {/* Vendors Placeholder */}
-            <Route
-              path="/vendors"
-              element={
-                <PlaceholderPage
-                  title="Vendor Directory"
-                  description="Manage vendor profiles, contracts, historical variance scores, and terms."
-                />
-              }
-            />
+            {/* Vendors Intelligence Directory */}
+            <Route path="/vendors" element={<VendorsPage />} />
 
             {/* Memory Insights (With strict required disclaimer) */}
             <Route
@@ -77,7 +67,7 @@ export const App: React.FC = () => {
               element={
                 <PlaceholderPage
                   title="Financial Reports"
-                  description="Variance audits, cash disbursement forecasts, and team resolution velocity."
+                  description="Variance audits, cash disbursement forecasts, and team resolution velocity. Not part of this release."
                 />
               }
             />
@@ -88,7 +78,7 @@ export const App: React.FC = () => {
               element={
                 <PlaceholderPage
                   title="System Settings"
-                  description="Company entities, ERP connector configurations, and approval thresholds."
+                  description="Company entities, ERP connector configurations, and approval thresholds. Not part of this release."
                 />
               }
             />
@@ -103,4 +93,3 @@ export const App: React.FC = () => {
 };
 
 export default App;
-

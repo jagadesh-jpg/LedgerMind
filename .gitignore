@@ -1,7 +1,30 @@
+# Node dependencies & build artifacts
 node_modules/
 dist/
+
+# Environment files
 .env
 .env.*
 !.env.example
-.DS_Store
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+# Python virtual environment & caches
+.venv/
+env/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.agent_cache/
+backend/eval/cache/
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs & temp files
 *.log
+.DS_Store
